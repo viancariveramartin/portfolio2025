@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--link rel="stylesheet" href="portfoliov3.css"-->
+	<title>VIANCA RIVERA MARTIN</title>
+<style>
+
+
+    body{
+	background-color: #FCEBD6; /* CREAM COLOR */
+	color: #FFFDD0; 
+	font-family: helvetica;
+	margin: 0;
+}
+/* VIANCA RIVERA MARTIN */
+h1 {
+	font-family: poppins;
+	text-align: center;
+	font-size: 80px;
+	color: #0018FF; /* BLUE */
+	margin-top: 150px;
+}
+/* INFO HEADING */
+h2 {
+	font-family: poppins;
+	text-align: center;
+	font-size: 60px;
+	color:#0018FF;
+	border: 6px solid #A7AA11;
+	border-radius: 50px;/* GREEN */
+}
+p {
+	color: #0018FF;
+	font-size: 24px;
+	text-align: center;
+	margin:10px;
+}
+
+#p{
+    color: #0018FF;
+	font-size: 24px;
+	text-align: center;
+	margin:10px;
+}
+
+#p:hover {
+    color: #FF8C22;
+}
+
+marquee{
+    font-family: poppins;
+	text-align: center;
+	font-size: 60px;
+	color: #0018FF;
+	background-color:#A7AA11;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 50px;
+  padding: 30px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+  color:#0018FF;
+}
+
+.item1 {
+  grid-column: 1 / span 4;
+}
+.item2 {
+  grid-column: 1 / span 2;
+}
+.item3 {
+  grid-column: 3 / span 2;
+  text-align:center;
+}
+.item4 {
+  grid-column: 3 / span 2;
+ 
+}
+@media only screen and (max-width: 600px) {
+  .item1 {grid-area: 1 / span 5;}
+  .item2 {grid-area: 2 / span 5;}
+  .item3 {grid-area: 3 / span 5;}
+  .item4 {grid-area: 4 / span 5;}
+}
+
+img{
+    max-width: 100%;
+    max-height:100%;
+}
+
+#image1 {
+    display: inline-block;
+    height: auto;
+    float: left;
+  }
+
+  #image2 {
+    display: none; /* Initially hidden */
+    height: auto;
+  }
+  
+
+  #banner {
+     max-width= 100%;
+     display: block;
+     float: right;
+ }
+ #footer {
+     width:50px;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     padding: 15px;
+ }
+
+/*navigation bar*/
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #A7AA11; /*GREEN*/
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+li {
+	float: left;
+	border-right: 1px solid #bbb;
+}
+li:last-child{
+	border-right: none;
+	float: right;
+}
+li a{
+	display: block;
+	color: #FCEBD6;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+li a:hover:not(.active){
+	background-color: #FF8C22; /* ORANGE */
+	text-decoration: underline;
+}
+.active {
+	background-color: #0018FF;
+}
+/* end of navigation bar */
+
+a {
+    text-decoration: none; /* Removes the Link underine*/
+}
+h2:hover{
+    background-color: #A7AA11;
+}
+    
+footer {
+  text-align: left;
+  padding: 10px;
+  background-color: purple;
+}
+
+
+</style>
+</head>
+<body>
+	<!-- Main header-->
+	<h1>VIANCA RIVERA MARTIN</h1>
+	<p>*latina denver & los angeles based designer</p>
+
+	<a target="_blank" href = "https://editor.p5js.org/vrivmar/full/m7btoSWqA"><img id = "banner" alt ="Filler" src = "/images/alternatedimensions.png"></a>
+	<!--NAVIGATION BAR -->
+	<ul>
+		<li><a href="portfoliov3.html" onclick="setActive(this)">home</a></li>
+		<li><a href="portfoliov3.html#info" onclick="setActive(this)">info</a></li>
+		<li><a href="portfoliov3.html#projects" onclick="setActive(this)">projects</a></li>
+		<li><a href="contact.html" onclick="setActive(this)">contact</a></li>
+	</ul>
+		<!--End of Navigation bar -->
+		
+		<!-- INFORMATION TAB-->
+
+		<div class="grid-container">
+  <div id = "info" class="item1"><h2>INFO</h2></div>
+  <div class="item2">
+        <img id = "image1" alt="This is me!" src="/images/seriousme.jpg">
+	    <img id="image2" alt="This is me!" src="/images/laughingme.jpg"></div>
+  <div class="item3"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5Ymc1qQ260EOfJcnrzs4D1?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe><p style = "padding: 50px;">	i design things and i enjoy art. currently a multimedia arts major at loyola marymount university.i create virtual experiences whether that be through web design, ux, game design, or motion graphics. whilst working with digital media i explore personal experiences and current events, within  ever-changing and advancing software and tech. i like doing traditional art too to balance out the digital, such as printmaking and illustration. for fun you can find me tearing up a dance floor or reading a book, maybe even both at once.</p></div>  
+</div>
+  	
+<section id = "projects"> 
+<!--marquee behavior="scroll" direction="right" scrollamount="20" onmouseover="this.stop();" onmouseout="this.start();"> MOTION DESIGN</marquee-->
+<a href = "digitaldesign.html"><h2> DIGITAL DESIGN </h2></a>
+<a href = "code.html"><h2> CODE </h2></a>
+<a href = "artwork.html"><h2> ARTWORK </h2></a>
+</section> 
+
+<section id = "portfolio">
+    <a target = "_blank" href = "https://drive.google.com/file/d/1o2eSan-NpgGPuXGmcvkg1ARiTsmS4lxg/view?usp=drive_link"><p id ="p"> portfolio link </p></a> 
+    
+</section>
+
+
+
+<a href = "https://www.instagram.com/stranded_arts?igsh=NTc4MTIwNjQ2YQ=="><img id = "footer" src="/images/instagram.jpg"></a>
+
+	<script>
+	//navigation bar
+    function setActive(element) {
+      // Remove the 'active' class from all navigation items
+      var allNavItems = document.querySelectorAll('li a');
+      allNavItems.forEach(function(item) {
+        item.classList.remove('active');
+      });
+
+      // Add the 'active' class to the clicked navigation item
+      element.classList.add('active');
+    }
+      var image = document.getElementById('image1');
+//MOUSEOVER PIC OF ME FUNCTIONALITY
+  image.addEventListener('mouseover', function() {
+    image.src = '/images/seriousme.jpg';
+  });
+
+  image.addEventListener('mouseout', function() {
+    image.src = '/images/laughingme.jpg';
+    
+  });
+    
+  image.addEventListener('click', function() {
+  image.src = '/images/apfel.png';
+    
+  });
+
+  </script>
+
+
+
+
+</body>
+</html>

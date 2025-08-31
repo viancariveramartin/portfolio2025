@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>VIANCA RIVERA MARTIN</title>
+<style>
+
+    body{
+	background-color: #FCEBD6;
+	color: #FFFDD0;
+	font-family: helvetica;
+	margin: 0;
+}
+/* VIANCA RIVERA MARTIN */
+h1 {
+	font-family: poppins;
+	text-align: center;
+	font-size: 80px;
+	color: #0018FF;
+	margin-top: 150px;
+}
+/* INFO HEADING */
+h2 {
+	font-family: poppins;
+	text-align: center;
+	font-size: 60px;
+	color: #0018FF;
+	border: 6px solid #A7AA11;
+	border-radius: 50px;
+	display: block;
+}
+h3 {
+	font-family: helvetica;
+	font-size: 30px;
+	color: #0018FF;
+	display: block;
+}
+p {
+	color: #0018FF;
+	font-size: 24px;
+	text-align: center;
+	margin:10px;
+	
+}
+
+#p{
+    font-size: 13px;
+	text-align: right;
+	color: #0018FF;
+}
+
+img{
+    max-width: 100%;
+    max-height:100%;
+}
+
+video {
+    margin: 10px;
+    display: block;
+}
+
+/* GRID STYLING */ 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 50px;
+  padding: 30px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+  color:#0018FF;
+}
+
+/* PRINTMAKING */
+.item1 {
+  grid-area: 1 / 1 / span 1 / span 1;
+}
+.item2 {
+  grid-area: 1 / 2 / span 1 / span 2;
+}
+.item3 {
+  grid-area: 2 / 4 / span 1 / span 1;
+}
+.item4 {
+  grid-area: 2 / 2 / span 1 / span 1;
+}
+.item5 {
+  grid-area: 3 / 1 / span 1 / span 1;
+}
+.item6 {
+  grid-area: 3 / 2 / span 1 / span 1;
+}
+.item7 {
+  grid-area: 3 / 3 / span 1 / span 1;
+}
+.item8 {
+  grid-area: 4 / 3 / span 1 / span 1;
+}
+.item9 {
+  grid-area: 4 / 1 / span 1 / span 1;
+}
+/* PERFECT */
+.item10 {
+  grid-area: 5 / 1 / span 1 / span 1;
+}
+.item11 {
+  grid-area: 5 / 2 / span 1 / span 1;
+}
+.item12 {
+  grid-area: 5 / 4 / span 1 / span 1;
+}
+/* POW */
+.item13 {
+  grid-area: 6 / 3 / span 1 / span 1;
+}
+.item14 {
+  grid-area: 6 / 4 / span 1 / span 1;
+}
+.item15 {
+  grid-area: 7 / 3 / span 1 / span 1;
+}
+.item16 {
+  grid-area: 7 / 4 / span 1 / span 1;
+}
+.item17 {
+  grid-area: 8 / 3 / span 1 / span 1;
+}
+.item18 {
+  grid-area: 8 / 4 / span 1 / span 1;
+}
+.item19 {
+  grid-area: 9 / 3 / span 1 / span 1;
+}
+.item20 {
+  grid-area: 9 / 4 / span 1 / span 1;
+}
+.item21 {
+  grid-area: 6 / 1 / span 1 / span 1;
+}
+/* ILLUSTRATIONS */
+.item22 {
+  grid-area: 1 / 1 / span 1 / span 1;
+}
+.item23 {
+  grid-area: 1 / 2 / span 1 / span 2;
+}
+.item24 {
+  grid-area: 2 / 4 / span 1 / span 1;
+}
+.item25 {
+  grid-area: 2 / 2 / span 1 / span 1;
+}
+.item26 {
+  grid-area: 3 / 1 / span 1 / span 1;
+}
+.item27 {
+  grid-area: 3 / 2 / span 1 / span 1;
+}
+.item28 {
+  grid-area: 3 / 3 / span 1 / span 1;
+}
+.item29 {
+  grid-area: 4 / 3 / span 1 / span 1;
+}
+.item30 {
+  grid-area: 4 / 1 / span 1 / span 1;
+}
+
+
+
+.item31 {
+  grid-area: 5 / 1 / span 1 / span 1;
+}
+.item32 {
+  grid-area: 5 / 3 / span 1 / span 1;
+}
+.item33 {
+  grid-area: 6 / 3 / span 1 / span 1;
+}
+.item34 {
+  grid-area: 6 / 1 / span 1 / span 1;
+}
+
+/* END OF GRID STYLING */ 
+
+/*navigation bar*/
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #A7AA11;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+li {
+	float: left;
+	border-right: 1px solid #bbb;
+}
+li:last-child{
+	border-right: none;
+	float: right;
+}
+li a{
+	display: block;
+	color: #FCEBD6;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+li a:hover:not(.active){
+	background-color: #FF8C22;
+	text-decoration: underline;
+}
+.active {
+	background-color: #0018FF;
+}
+/* end of navigation bar */
+
+a {
+        text-decoration: none; /* Removes the Link underine*/
+}
+h2:hover{
+        background-color: #A7AA11;
+}
+
+/* COLLAPSIBLE STYLING */
+.collapsible {
+  cursor: pointer;
+  padding: 0px;
+  
+}
+
+.active, .collapsible:hover {
+  background-color: #A7AA11;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  
+}
+@media only screen and (max-width: 600px) {
+  .item1 {grid-area: 1 / span 5;}
+  .item2 {grid-area: 2 / span 5;}
+  .item3 {grid-area: 3 / span 5;}
+  .item4 {grid-area: 4 / span 5;}
+  .item5 {grid-area: 5 / span 5;}
+  .item6 {grid-area: 6 / span 5;}
+  .item7 {grid-area: 7 / span 5;}
+  .item8 {grid-area: 8 / span 5;}
+  .item9 {grid-area: 9 / span 5;}
+  .item10 {grid-area: 10 / span 5;}
+  .item11 {grid-area: 11 / span 5;}
+  .item12 {grid-area: 12 / span 5;}
+  .item13 {grid-area: 13 / span 5;}
+  .item14 {grid-area: 14 / span 5;}
+  .item15 {grid-area: 15 / span 5;}
+  .item16 {grid-area: 16 / span 5;}
+  .item17 {grid-area: 17 / span 5;}
+  .item18 {grid-area: 18 / span 5;}
+  .item19 {grid-area: 19 / span 5;}
+  .item20 {grid-area: 20 / span 5;}
+  .item21 {grid-area: 21 / span 5;}
+  .item22 {grid-area: 22 / span 5;}
+  .item23 {grid-area: 23 / span 5;}
+  .item24 {grid-area: 24 / span 5;}
+  .item25 {grid-area: 25 / span 5;}
+  .item26 {grid-area: 26 / span 5;}
+  .item27 {grid-area: 27 / span 5;}
+  .item28 {grid-area: 28 / span 5;}
+  .item29 {grid-area: 29 / span 5;}
+  .item30 {grid-area: 30 / span 5;}
+  .item31 {grid-area: 31 / span 5;}
+  .item32 {grid-area: 32 / span 5;}
+  .item33 {grid-area: 33 / span 5;}
+  .item34 {grid-area: 34 / span 5;}
+}
+}
+</style>
+</head>
+<body>
+    <!--NAVIGATION BAR -->
+	<ul>
+		<li><a href="portfoliov3.html" onclick="setActive(this)">home</a></li>
+		<li><a href="portfoliov3.html#info" onclick="setActive(this)">info</a></li>
+		<li><a href="portfoliov3.html#projects" onclick="setActive(this)">projects</a></li>
+		<li><a href="contact.html#contact" onclick="setActive(this)">contact</a></li>
+	</ul>
+		<!--End of Navigation bar -->
+
+<h1> ARTWORK </h1>
+<p>*prints & illustrations!</p>
+
+<h2 class="collapsible"> PRINTMAKING </h2>
+<div class="content">
+    <div class="grid-container">
+        <div class="item1"><img alt ="Filler" src = "/images/rockon.png"></div>
+        <div class="item2"><h3> "Rock On!" </h3><p> Lithograph </p></div>
+        <div class="item3"><img alt ="Filler" src = "/images/punkrockbaby.jpg"></div>
+        <div class="item4"><h3> "Punk Rock Baby" </h3><p>Lithograph </p></div>
+        <div class="item5"><p><img alt ="Filler" src = "/images/perria.jpg"></div>
+        <div class="item6"><p><img alt ="Filler" src = "/images/perriagallery.jpg"></div>
+        <div class="item7"><h3> "Perría" </h3><p> Relief Wood Cut Print </p></div>
+        <div class="item8"><img alt ="Filler" src = "/images/symbolsoflove.png"></div>
+        <div class="item9"><h3> "Symbols of Love" </h3><p> Drypoint Etching </p></div>
+        <div class="item10"><img alt ="Filler" src = "/images/perfect.jpg"></div>
+        <div class="item11"><img alt ="Filler" src = "/images/perfectgallery.png"></div>
+        <div class="item12"><h3> "Perfect" </h3><p> Drypoint Etching </p></div>
+        <div class="item13"><img alt ="Filler" src = "/images/pow1.jpg"></div>
+        <div class="item14"><img alt ="Filler" src = "/images/pow2.jpg"></div>
+        <div class="item15"><img alt ="Filler" src = "/images/pow3.jpg"></div>
+        <div class="item16"><img alt ="Filler" src = "/images/pow4.jpg"></div>
+        <div class="item17"><img alt ="Filler" src = "/images/pow5.jpg"></div>
+        <div class="item18"><img alt ="Filler" src = "/images/pow6.jpg"></div>
+        <div class="item19"><img alt ="Filler" src = "/images/pow7.jpg"></div>
+        <div class="item20"><img alt ="Filler" src = "/images/pow8.jpg"></div>
+        <div class="item21"><h3> "POW" </h3><p> Monoprint Series </p></div>
+</div>
+</div>
+
+<h2 class="collapsible"> ILLUSTRATIONS </h2>
+<div class="content">
+    <div class="grid-container">
+        <div class="item22"><img alt ="Filler" src = "/images/culebra.jpg"></div>
+        <div class="item23"><h3> "Culebra" </h3><p> Sketchbook Cover created with paint markers </p></div>
+        <div class="item24"><img alt ="Filler" src = "/images/ecomagic3.jpg"></div>
+        <div class="item25"><h3> "Fish Out of Water" </h3><p> Created with paint markers </p></div>
+        <div class="item26"><p><img alt ="Filler" src = "/images/ecomagic2.png"></div>
+        <div class="item27"><p><img alt ="Filler" src = "/images/ecomagic.jpg"></div>
+        <div class="item28"><h3> Indie Game </h3><p> Game environment prototypes created in Procreate </p></div>
+        <div class="item29"><img alt ="Filler" src = "/images/high.jpg"></div>
+        <div class="item30"><h3> "Distortions" </h3></div>
+        <div class="item31"><img alt ="Filler" src = "/images/jaguar.jpg"></div>
+        <div class="item32"><h3> "Popocatépetl y Ocelotl" </h3></div>
+        <div class="item33"><img alt ="Filler" src = "/images/john.png"></div>
+        <div class="item34"><h3> "Johnny Boy" </h3></div>
+</div>
+</div>
+
+<p id = "p"> *more info about specific works can be provided upon request</p>
+
+<script>
+	//navigation bar
+    function setActive(element) {
+      // Remove the 'active' class from all navigation items
+      var allNavItems = document.querySelectorAll('li a');
+      allNavItems.forEach(function(item) {
+        item.classList.remove('active');
+      });
+
+      // Add the 'active' class to the clicked navigation item
+      element.classList.add('active');
+    }
+      var image = document.getElementById('image1');
+
+//COLLAPSIBLE
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+ </script>    
+    
+</body>
+</html>

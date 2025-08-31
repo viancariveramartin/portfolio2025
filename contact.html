@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--link rel="stylesheet" href="portfoliov3.css"-->
+	<title>VIANCA RIVERA MARTIN</title>
+<style>
+
+
+    body{
+	background-color: #FCEBD6; /* CREAM COLOR */
+	color: #FFFDD0; 
+	font-family: helvetica;
+	margin: 0;
+}
+/* VIANCA RIVERA MARTIN */
+h1 {
+	font-family: poppins;
+	text-align: center;
+	font-size: 80px;
+	color: #0018FF; /* BLUE */
+	margin-top: 150px;
+}
+/* INFO HEADING */
+h2 {
+	font-family: poppins;
+	text-align: center;
+	font-size: 60px;
+	color:#0018FF;
+	border: 6px solid #A7AA11;
+	border-radius: 50px;/* GREEN */
+}
+p {
+	color: #0018FF;
+	font-size: 24px;
+	text-align: center;
+	margin:10px;
+}
+
+#p{
+    font-size: 13px;
+	text-align: right;
+	color: #0018FF;
+	padding: 100px;
+}
+
+
+img{
+    max-width: 100%;
+    max-height:100%;
+}
+
+#image1 {
+    display: inline-block;
+    height: auto;
+    float: left;
+  }
+
+  #image2 {
+    display: none; /* Initially hidden */
+    height: auto;
+  }
+  
+
+  #banner {
+     max-width= 100%;
+     display: block;
+     float: right;
+ }
+ #footer {
+     width:20px;
+     height:20px;
+ }
+
+/*navigation bar*/
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #A7AA11; /*GREEN*/
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+li {
+	float: left;
+	border-right: 1px solid #bbb;
+}
+li:last-child{
+	border-right: none;
+	float: right;
+}
+li a{
+	display: block;
+	color: #FCEBD6;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+li a:hover:not(.active){
+	background-color: #FF8C22; /* ORANGE */
+	text-decoration: underline;
+}
+.active {
+	background-color: #0018FF;
+}
+/* end of navigation bar */
+
+a {
+    text-decoration: none; /* Removes the Link underine*/
+}
+h2:hover{
+    background-color: #A7AA11;
+}
+/* COLLAPSIBLE STYLING */
+.collapsible {
+  cursor: pointer;
+  padding: 0px;
+  
+}
+
+.active, .collapsible:hover {
+  background-color: #A7AA11;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  
+}    
+marquee{
+    font-size: 200%;
+}
+
+.marquee {
+  pointer-events: none; /* So it doesn’t interfere with clicking */
+  z-index: 999; /* On top */
+}
+
+</style>
+</head>
+<body>
+	<!-- Main header-->
+	<h1>VIANCA RIVERA MARTIN</h1>
+	<p>*denver & los angeles based designer</p>
+
+	<!--NAVIGATION BAR -->
+	<ul>
+		<li><a href="portfoliov3.html" onclick="setActive(this)">home</a></li>
+		<li><a href="portfoliov3.html#info" onclick="setActive(this)">info</a></li>
+		<li><a href="portfoliov3.html#projects" onclick="setActive(this)">projects</a></li>
+		<li><a href="contact.html#contact" onclick="setActive(this)">contact</a></li>
+	</ul>
+		<!--End of Navigation bar -->
+
+
+
+<h2 id = "contact" class = "collapsible">GET IN TOUCH! </h2>
+    <div class="content">
+        <div id="marquee-container">
+            <a href = "mailto:viancariveramartin@gmail.com"><marquee id="myMarquee" behavior="alternate" onmouseover="this.stop();" onmouseout="this.start();">viancariveramartin@gmail.com</marquee></a>
+        </div>
+</div>
+
+
+<script>
+	//navigation bar
+    function setActive(element) {
+      // Remove the 'active' class from all navigation items
+      var allNavItems = document.querySelectorAll('li a');
+      allNavItems.forEach(function(item) {
+        item.classList.remove('active');
+      });
+
+      // Add the 'active' class to the clicked navigation item
+      element.classList.add('active');
+    }
+//COLLAPSIBLE
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+//THIS IS NOT MY OWN CODE I HAD HELP FROM THE INTERNET
+  // RANDOM COLOR GENERATOR
+  function getRandomColor() {
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+  }
+
+  // CREATE A NEW BOUNCING EMAIL
+  function createBouncingEmail() {
+    const email = document.createElement('div');
+    email.classList.add('marquee');
+    email.textContent = "viancariveramartin@gmail.com";
+    email.style.position = 'absolute';
+    email.style.fontSize = '24px';
+    email.style.fontFamily = 'poppins';
+    email.style.color = getRandomColor();
+    email.style.whiteSpace = 'nowrap';
+
+    // Random start position
+    let x = Math.random() * window.innerWidth;
+    let y = Math.random() * window.innerHeight;
+
+    // Random movement direction
+    let dx = (Math.random() - 0.5) * 4;
+    let dy = (Math.random() - 0.5) * 4;
+
+    email.style.left = `${x}px`;
+    email.style.top = `${y}px`;
+
+    document.body.appendChild(email);
+
+    // Bounce animation loop
+    function animate() {
+      x += dx;
+      y += dy;
+
+      // Bounce off walls
+      if (x <= 0 || x + email.offsetWidth >= window.innerWidth) dx *= -1;
+      if (y <= 0 || y + email.offsetHeight >= window.innerHeight) dy *= -1;
+
+      email.style.left = `${x}px`;
+      email.style.top = `${y}px`;
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  }
+
+  // Create a new bouncing email every 1.5 seconds
+  setInterval(createBouncingEmail, 1500);
+ </script>
+</body>
+</html>
